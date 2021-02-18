@@ -2,6 +2,9 @@ import subprocess
 
 import typer
 
+app = typer.Typer()
+
+@app.command()
 def main():
 
     project = typer.prompt("Project name:", default="LACE")
@@ -25,4 +28,4 @@ def main():
 
 
 if __name__ == "__main__":
-    typer.run(main)
+    app()
